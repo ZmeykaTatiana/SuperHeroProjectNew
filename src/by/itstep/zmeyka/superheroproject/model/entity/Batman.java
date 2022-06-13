@@ -50,6 +50,10 @@ public class Batman extends Hero {
     }
 
 
+    @Override
+    public int compareTo(Hero o) {
+        return super.compareTo(o);
+    }
 
     @Override
     public String toString() {

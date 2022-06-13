@@ -58,4 +58,9 @@ public class WonderWoman extends Hero {
                 super.toString()+
                 " }";
     }
+
+    @Override
+    public int compareTo(Hero o) {
+        return super.compareTo(o);
+    }
 }

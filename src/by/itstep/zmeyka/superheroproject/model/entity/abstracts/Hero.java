@@ -2,7 +2,7 @@ package by.itstep.zmeyka.superheroproject.model.entity.abstracts;
 
 import java.util.Objects;
 
-public class Hero {
+public class Hero implements Comparable<Hero>{
     private int health;
 
     @Override
@@ -35,8 +35,24 @@ public class Hero {
         }
     }
 
+
+
     @Override
     public String toString() {
         return "health= " + health;
+    }
+
+    @Override
+    public int compareTo(Hero o) {
+        if(health>o.health){
+            return 555;
+        }else if(health<o.health){
+            return -100;
+
+        }else{
+            return 0;
+
+        }
+
     }
 }
