@@ -28,6 +28,7 @@ public class Main {
         team.add(woman);
 
 
+
         MyIterator iterator=new DynamicTeamIterator(team);
         HeroRate.rateByHealth(team,new RateByHealthDown());
 

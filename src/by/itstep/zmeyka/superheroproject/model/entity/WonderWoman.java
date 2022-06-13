@@ -2,6 +2,8 @@ package by.itstep.zmeyka.superheroproject.model.entity;
 
 import by.itstep.zmeyka.superheroproject.model.entity.abstracts.Hero;
 
+import java.util.Objects;
+
 public class WonderWoman extends Hero {
     private int skill;
     private int hardness;
@@ -10,7 +12,22 @@ public class WonderWoman extends Hero {
     public WonderWoman(){
 
     }
-    public WonderWoman(int skill,int hardness,int survival){
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        WonderWoman woman = (WonderWoman) o;
+        return skill == woman.skill && hardness == woman.hardness;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), skill, hardness);
+    }
+
+    public WonderWoman(int skill, int hardness, int survival){
         super(survival);
         this.skill=skill;
         this.hardness=hardness;
